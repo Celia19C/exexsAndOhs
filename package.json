@@ -1,0 +1,19 @@
+{
+  "name": "exs-ohs",
+  "version": "1.0.0",
+  "description": "kata",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "author": "Celia",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^23.4.2"
+  },
+  "jest": { 
+    "testEnvironment": "node"
+
+  }
+}
