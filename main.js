@@ -1,19 +1,25 @@
 
 function exesAndOhs(text) {
-    let numberOfO = 0;
-    let numberOfX = 0;
 
     const arrayText = Array.from(text);
-    console.log(arrayText);
 
-    arrayText.forEach(function(element){
-        if (element === 'x'){
-            numberOfX++
-        } else if (element === 'o'){
-            numberOfO++
-        }
-    })
-    return numberOfO === numberOfX
+    let numberOfX = arrayText
+    .filter(element => element === 'x')
+    console.log(numberOfX);
+
+    let numberOfO = arrayText
+    .filter(element => element === 'o')
+    console.log(numberOfO);
+
+
+
+        // if (element === 'x'){
+        //     numberOfX++
+        // } else if (element === 'o'){
+        //     numberOfO++
+        // }
+
+    return numberOfO.length === numberOfX.length
 }
 
 module.exports = {
