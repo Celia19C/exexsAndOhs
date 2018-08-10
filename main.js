@@ -1,21 +1,19 @@
 
 function exesAndOhs(text) {
-    let acumulatorO = 0;
-    let acumulatorX = 0;
-    for (let i = 0; i < text.length; i++){
-        const element = text[i];
+    let numberOfO = 0;
+    let numberOfX = 0;
+
+    const arrayText = Array.from(text);
+    console.log(arrayText);
+
+    arrayText.forEach(function(element){
         if (element === 'x'){
-            acumulatorX ++
+            numberOfX++
         } else if (element === 'o'){
-            acumulatorO ++
-    }
-    console.log(acumulatorO)
-    console.log(acumulatorX)
-    }
-    if (acumulatorO === acumulatorX) {
-        return true
-    }
-    return false
+            numberOfO++
+        }
+    })
+    return numberOfO === numberOfX
 }
 
 module.exports = {
