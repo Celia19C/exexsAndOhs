@@ -1,25 +1,20 @@
 
+const countNumberOfElements = (array, elementToCount) => array.filter(element => element === elementToCount).length
+
+//curryfication
+const createCountNumberOf = array => element => countNumberOfElements(array, element) 
+//
+
 function exesAndOhs(text) {
+    const characters = Array.from(text.toLowerCase());
 
-    const arrayText = Array.from(text);
+    const countNumberOfCharacters = createCountNumberOf(characters)
 
-    let numberOfX = arrayText
-    .filter(element => element === 'x')
-    console.log(numberOfX);
+    const numberOfX = countNumberOfCharacters('x')
+    const numberOfO = countNumberOfCharacters('o')
 
-    let numberOfO = arrayText
-    .filter(element => element === 'o')
-    console.log(numberOfO);
+    return numberOfO === numberOfX
 
-
-
-        // if (element === 'x'){
-        //     numberOfX++
-        // } else if (element === 'o'){
-        //     numberOfO++
-        // }
-
-    return numberOfO.length === numberOfX.length
 }
 
 module.exports = {
